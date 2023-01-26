@@ -1,0 +1,69 @@
+@import 'var';
+@import 'mixins';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*
+$bg-color: #14d0de;
+$heading_color: rgba(12, 74, 100, 0.941);
+
+html {
+    font-size: 62.5%;
+}
+*/
+
+// 1. Operators : like (A+B) can be used in SCSS
+// 2. Variables : We used $bg-color 
+// 3. Nesting : use the '&' for nested css
+// 4. Mixin : For repeating codes we can use that
+// 5. Parameters : we can pass parameter as variables with mixin
+// 6. Partials : We can make a separate files for variables and mixins (start their name with _ )
+
+/*
+@mixin flexprob {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+@mixin commonCode ($spc, $letterStyle){
+    letter-spacing: $spc;
+    text-transform: $letterStyle;
+}
+*/
+
+.main_header {
+    @include commonCode(5rem, capitalize);
+    @include flexprob;
+    width: 100vw;
+    height: 100vh;
+    background: $bg-color;
+
+    h1 {
+        color: $heading_color;
+        font-size: 5rem + 2rem;
+        letter-spacing: 0.3rem;
+
+        &:hover{
+            color: #dabcd9;
+        }
+
+        &::after{
+            content: " DSA";
+            color: #2a5aac;
+        }
+    }
+
+
+    p {
+        @include commonCode(1rem, lowercase);
+        color: #504abb;
+        font-size: 3rem + 1rem;
+    }
+
+}

@@ -1,0 +1,11 @@
+@mixin flexprob {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+@mixin commonCode ($spc, $letterStyle){
+    letter-spacing: $spc;
+    text-transform: $letterStyle;
+}

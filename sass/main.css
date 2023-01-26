@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*
+$bg-color: #14d0de;
+$heading_color: rgba(12, 74, 100, 0.941);
+
+html {
+    font-size: 62.5%;
+}
+*/
+/*
+@mixin flexprob {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+@mixin commonCode ($spc, $letterStyle){
+    letter-spacing: $spc;
+    text-transform: $letterStyle;
+}
+*/
+.main_header {
+  letter-spacing: 5rem;
+  text-transform: capitalize;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  background: #14d0de;
+}
+.main_header h1 {
+  color: rgba(12, 74, 100, 0.941);
+  font-size: 7rem;
+  letter-spacing: 0.3rem;
+}
+.main_header h1:hover {
+  color: #dabcd9;
+}
+.main_header h1::after {
+  content: " DSA";
+  color: #2a5aac;
+}
+.main_header p {
+  letter-spacing: 1rem;
+  text-transform: lowercase;
+  color: #504abb;
+  font-size: 4rem;
+}/*# sourceMappingURL=main.css.map */
